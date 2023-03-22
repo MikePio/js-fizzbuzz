@@ -34,24 +34,22 @@ const container = document.querySelector('.container');
 console.log(container);
 
 for(let i = 1; i <= 100; i++){
-  // console.log(i);
+  // console.log(i); //stampa tutti i numeri da 1 a 100 in console
   // OPPURE
 // for(let i = 0; i < 100; i++){
 //   console.log(i+1);
 
-
   // vengono creati gli h3 in html
-  const numbers = document.createElement('h3');
+  let numbers = document.createElement('h3');
   // il contenitore contiene tutti gli h3
   container.append(numbers);
   // ogni h3 ha un proprio numero
-  numbers.append(i);
+  // numbers.append(i);  //stampa tutti i numeri da 1 a 100 nella pagina hmml
   // aggiunge una classe per colorare il background di ogni numero
   numbers.classList.add("bg-color");
   
   
   let numbersMultiples = i;
-
   
   // SEMPRE MEGLIO METTERE CIò CHE è COMUNE COME CONDIZIONE (ES . PER PRIMA: if(!(i % 3) && !(i % 5)){ COME SECONDA O TERZA if(!(i % 3)){ OPPURE if(!(i % 3)){  ) 
   if(!(i % 3) && !(i % 5)){
@@ -63,6 +61,7 @@ for(let i = 1; i <= 100; i++){
     // console.log(numbersMultiples - (i % 5) - (i % 3) );
     console.log('FizzBuzz');
     
+    numbers.append('FizzBuzz');
 
       
   }
@@ -74,6 +73,7 @@ for(let i = 1; i <= 100; i++){
 
     // console.log(numbersMultiples - (i % 3) );
     console.log('Fizz');
+    numbers.append('Fizz');
     
 
 
@@ -86,25 +86,21 @@ for(let i = 1; i <= 100; i++){
     
     // console.log(numbersMultiples - (i % 5) );
     console.log('Buzz');
+    numbers.append('Buzz');
 
     
   }
   
   else{
     console.log(numbersMultiples);
+    numbers.append(numbersMultiples );
+
   }
   // * è LA STESSA COSA DI:
   // else if((i % 3) || (i % 5))  {
   //   console.log(numbersMultiples);
 
   // }
-
-  
-  
-
-
-
-
 
 }
 
