@@ -34,7 +34,7 @@ const container = document.querySelector('.container');
 console.log(container);
 
 for(let i = 1; i <= 100; i++){
-  console.log(i);
+  // console.log(i);
   // OPPURE
 // for(let i = 0; i < 100; i++){
 //   console.log(i+1);
@@ -49,20 +49,58 @@ for(let i = 1; i <= 100; i++){
   // aggiunge una classe per colorare il background di ogni numero
   numbers.classList.add("bg-color");
   
-  if(!(i % 5)){
-    numbers.classList.add("bg-black");
+  
+  let numbersMultiples = i;
+
+  
+  // SEMPRE MEGLIO METTERE CIò CHE è COMUNE COME CONDIZIONE (ES . PER PRIMA: if(!(i % 3) && !(i % 5)){ COME SECONDA O TERZA if(!(i % 3)){ OPPURE if(!(i % 3)){  ) 
+  if(!(i % 3) && !(i % 5)){
+  // è LA STESSA COSA DI:
+  // if((!(i % 3)) && (!(i % 5))){
+    
+    numbers.classList.add("bg-orange");
+
+    // console.log(numbersMultiples - (i % 5) - (i % 3) );
+    console.log('FizzBuzz');
+    
+
+      
+  }
+
+  else if(!(i % 3)){
+  // è LA STESSA COSA DI:
+  // if(i % 3 === 0){
+    numbers.classList.add("bg-red");
+
+    // console.log(numbersMultiples - (i % 3) );
+    console.log('Fizz');
+    
+
 
   }
 
-  if(!(i % 3)){
-    numbers.classList.add("bg-red");
+  else if(!(i % 5)){
+  // è LA STESSA COSA DI:
+  // if(i % 5 === 0){
+    numbers.classList.add("bg-black");
+    
+    // console.log(numbersMultiples - (i % 5) );
+    console.log('Buzz');
+
     
   }
   
-  if((!(i % 3)) && (!(i % 5))){
-    numbers.classList.add("bg-orange");
-    
+  else{
+    console.log(numbersMultiples);
   }
+  // * è LA STESSA COSA DI:
+  // else if((i % 3) || (i % 5))  {
+  //   console.log(numbersMultiples);
+
+  // }
+
+  
+  
 
 
 
