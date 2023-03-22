@@ -49,6 +49,15 @@ for(let i = 1; i <= 100; i++){
   // aggiunge una classe per colorare il background di ogni numero
   numbers.classList.add("bg-color");
   
+  if(!(i % 5)){
+    numbers.classList.add("bg-black");
+
+  }
+
+  if(!(i % 3)){
+    numbers.classList.add("bg-red");
+
+  }
 
 
 
