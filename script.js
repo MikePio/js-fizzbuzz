@@ -56,8 +56,14 @@ for(let i = 1; i <= 100; i++){
 
   if(!(i % 3)){
     numbers.classList.add("bg-red");
-
+    
   }
+  
+  if((!(i % 3)) && (!(i % 5))){
+    numbers.classList.add("bg-orange");
+    
+  }
+
 
 
 
