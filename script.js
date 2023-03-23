@@ -57,6 +57,7 @@ for(let i = 1; i <= 100; i++){
   // if((!(i % 3)) && (!(i % 5))){
     
     numbers.classList.add("bg-orange");
+    numbers.classList.add("box");
 
     // console.log(numbersMultiples - (i % 5) - (i % 3) );
     console.log('FizzBuzz');
@@ -70,6 +71,8 @@ for(let i = 1; i <= 100; i++){
   // è LA STESSA COSA DI:
   // if(i % 3 === 0){
     numbers.classList.add("bg-red");
+    numbers.classList.add("box");
+
 
     // console.log(numbersMultiples - (i % 3) );
     console.log('Fizz');
@@ -83,6 +86,8 @@ for(let i = 1; i <= 100; i++){
   // è LA STESSA COSA DI:
   // if(i % 5 === 0){
     numbers.classList.add("bg-black");
+    numbers.classList.add("box");
+
     
     // console.log(numbersMultiples - (i % 5) );
     console.log('Buzz');
@@ -95,6 +100,9 @@ for(let i = 1; i <= 100; i++){
     console.log(numbersMultiples);
     numbers.append(numbersMultiples );
 
+    numbers.classList.add("box");
+
+
   }
   // * è LA STESSA COSA DI:
   // else if((i % 3) || (i % 5))  {
@@ -105,7 +113,35 @@ for(let i = 1; i <= 100; i++){
 }
 
 
+// ! Altra soluzione semplificata //////////////////////////////////////////////////////////////////////////////////////////////
+/*
+const container = document.querySelector('.container');
 
+for(let i = 1; i < 101; i++){
+  
+  const box = document.createElement('div');
+  box.className = 'box';
+
+  let output = i;
+  
+  if(!(i % 15)){
+    output = 'FizzBuzz';
+    box.classList.add('bg-orange');
+  }
+  if(!(i % 3)){
+    output = 'Fizz';
+    box.classList.add('bg-red');
+  }
+  if(!(i % 5)){
+    output = 'Buzz';
+    box.classList.add('bg-black');
+  }
+  
+  box.append(output);
+  container.append(box)
+
+}
+*/
 
 
 
